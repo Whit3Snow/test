@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +22,7 @@ public class Fragment2 extends Fragment {
 
     GridView gridView;
     ImageAdapter adapter;
+    private Context context;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,16 +63,30 @@ public class Fragment2 extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        context = container.getContext();
 
         View rootView = inflater.inflate(R.layout.fragment_2, container, false);
 
         gridView = (GridView) rootView.findViewById(R.id.f2_gridview);
         adapter = new ImageAdapter();
         gridView.setAdapter(adapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                //화면 커지게 하는 동작 넣기.
+                Toast.makeText(context, ""+position, Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         adapter.notifyDataSetChanged();
 
