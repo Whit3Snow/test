@@ -54,7 +54,7 @@ public class Fragment2 extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+    /*
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +62,7 @@ public class Fragment2 extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
+    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public class Fragment2 extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_2, container, false);
 
-        gridView = (GridView) rootView.findViewById(R.id.f2_gridview);
+        gridView = (GridView) rootView.findViewById(R.id.gridViewImages);
         adapter = new ImageAdapter();
         gridView.setAdapter(adapter);
 

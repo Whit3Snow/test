@@ -9,33 +9,14 @@
 
 
     <GridView
-        android:id="@+id/f2_gridview"
+        android:id="@+id/gridViewImages"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:numColumns="3"
-        android:columnWidth="90dp"
         android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp"
-        android:gravity="center"
-        android:stretchMode="columnWidth"
-        >
-
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
     </GridView>
 
-<!--
-    <GridView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/f2_gridview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnWidth="120dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="3dp"
-        android:horizontalSpacing="3dp"
-        android:stretchMode="columnWidth"
-        android:gravity="center">
-
-    </GridView>
--->
 </FrameLayout>

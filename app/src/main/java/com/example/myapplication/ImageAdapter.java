@@ -103,6 +103,9 @@ public class ImageAdapter extends BaseAdapter {
             //---------------------------------------------------------------
             // 사진 항목들의 클릭을 처리하는 ImageClickListener 객체를 정의합니다.
             // 그리고 그것을 ImageView의 클릭 리스너로 설정합니다.
+            ImageClickListener imageViewClickListener
+                    = new ImageClickListener(context, imageArray[position]);
+            imageView.setOnClickListener((View.OnClickListener) imageViewClickListener);
         }
 
         return imageView;
