@@ -3,15 +3,10 @@ package com.example.myapplication;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -34,7 +29,7 @@ public class ImageAdapter extends BaseAdapter {
             R.drawable.image_41, R.drawable.image_42, R.drawable.image_43, R.drawable.image_44, R.drawable.image_45,
             R.drawable.image_46, R.drawable.image_47, R.drawable.image_48, R.drawable.image_49, R.drawable.image_50,
             R.drawable.image_51, R.drawable.image_52, R.drawable.image_53, R.drawable.image_54, R.drawable.image_55,
-            R.drawable.image_56, R.drawable.image_57, R.drawable.image_58, R.drawable.image_59, R.drawable.image_60
+            R.drawable.image_56, R.drawable.image_57, R.drawable.image_58, R.drawable.image_59, R.drawable.image_0
             };
 /*
 * R.drawable.image_31, R.drawable.image_32, R.drawable.image_33, R.drawable.image_34, R.drawable.image_35,
